@@ -44,4 +44,15 @@ public class Libro {
     public void impTitulo(){
         System.out.println("El titulo del libro es "+titulo);
     }
+    
+    public void impDetalles(){
+        System.out.println("Autor:" + autor + ",Libro:" + titulo + ",N PAginas: " + paginas);
+    }
+    
+    public String getDetalles(){
+        String detalles;
+        detalles ="";
+        detalles =(detalles +" Autor: "+ autor + " Libro: "+ titulo + " Paginas:"+ paginas);
+        return detalles;
+    }
 }
