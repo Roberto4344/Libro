@@ -12,6 +12,7 @@ public class Libro {
 
     private String autor;
     private String titulo;
+     
 
     /**
      * Fija el autor y el titulo del libro a los dados como parametro
@@ -21,4 +22,13 @@ public class Libro {
         autor = autorLibro;
         titulo = tituloLibro;
     }
+    
+    public String getAutor(){
+        return autor;
+    }
+    
+    public String getTitulo(){
+        return titulo;
+    }
+    
 }
