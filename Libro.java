@@ -31,4 +31,11 @@ public class Libro {
         return titulo;
     }
     
+    public void impAutor(){
+        System.out.println("El autor es "+ autor);
+    }
+    
+    public void impTitulo(){
+        System.out.println("El titulo del libro es "+titulo);
+    }
 }
