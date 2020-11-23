@@ -22,7 +22,7 @@ public class Libro {
         autor = autorLibro;
         titulo = tituloLibro;
         paginas = numeroPaginas;
-        numRef =" ";
+        numRef ="";
     }
 
     public String getAutor(){
@@ -41,10 +41,11 @@ public class Libro {
         return numRef;
     }
 
-   /**
+    /**
      * setter del numero de referencia
      */
     public void setNRef(String newNRef){
+
         if( newNRef.length() < 3){
             System.out.println("Numero no valido ,requiere de un minimo de 3 caracteres, el atributo no se modificara"); 
         }
@@ -62,19 +63,23 @@ public class Libro {
     }
 
     public void impDetalles(){
-        if (numRef == " "){
-            numRef = "ZZZ";
+        if (numRef == ""){
+            System.out.println("Autor:" + autor + ",Libro:" + titulo + ",N PAginas: " + paginas + "Numero Referencia: ZZZ");
         }
+        else{
         System.out.println("Autor:" + autor + ",Libro:" + titulo + ",N PAginas: " + paginas + "Numero Referencia:"+numRef);
     }
+}
 
     public String getDetalles(){
         String detalles;
         detalles ="";
-        if (numRef == " "){
-            numRef = "ZZZ";
+        if (numRef == ""){
+           detalles =detalles +" Autor: "+ autor + " Libro: "+ titulo + " Paginas:"+ paginas +" Numero referencia:ZZZ";
         }
+        else{
         detalles =detalles +" Autor: "+ autor + " Libro: "+ titulo + " Paginas:"+ paginas +" Numero referencia:"+ numRef;
         return detalles;
     }
+}
 }
