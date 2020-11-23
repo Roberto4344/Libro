@@ -14,6 +14,7 @@ public class Libro {
     private String titulo;
     private int paginas;
     private String numRef;
+    private int vecesPrestado;
 
     /**
      * Fija el autor y el titulo del libro a los dados como parametro
@@ -23,8 +24,13 @@ public class Libro {
         titulo = tituloLibro;
         paginas = numeroPaginas;
         numRef ="";
+        vecesPrestado = 0;
     }
 
+    public int getPrestamo(){
+        return vecesPrestado;
+    }
+    
     public String getAutor(){
         return autor;
     }
@@ -54,6 +60,10 @@ public class Libro {
         }   
     }
 
+    public void prestar(){
+        vecesPrestado = vecesPrestado + 1;
+    }
+    
     public void impAutor(){
         System.out.println("El autor es "+ autor);
     }
@@ -64,22 +74,22 @@ public class Libro {
 
     public void impDetalles(){
         if (numRef == ""){
-            System.out.println("Autor:" + autor + ",Libro:" + titulo + ",N PAginas: " + paginas + "Numero Referencia: ZZZ");
+            System.out.println("Autor:" + autor + ",Libro:" + titulo + ",N PAginas: " + paginas + "Numero Referencia: ZZZ"+" Veces prestado:"+ vecesPrestado);
         }
-        else{
-        System.out.println("Autor:" + autor + ",Libro:" + titulo + ",N PAginas: " + paginas + "Numero Referencia:"+numRef);
+        else{ 
+            System.out.println("Autor:" + autor + ",Libro:" + titulo + ",N PAginas: " + paginas + "Numero Referencia:"+numRef+" Veces prestado:"+ vecesPrestado);
+        }
     }
-}
 
     public String getDetalles(){
         String detalles;
         detalles ="";
         if (numRef == ""){
-           detalles =detalles +" Autor: "+ autor + " Libro: "+ titulo + " Paginas:"+ paginas +" Numero referencia:ZZZ";
+            detalles =detalles +" Autor: "+ autor + " Libro: "+ titulo + " Paginas:"+ paginas +" Numero referencia:ZZZ"+" Veces prestado:"+ vecesPrestado;
         }
         else{
-        detalles =detalles +" Autor: "+ autor + " Libro: "+ titulo + " Paginas:"+ paginas +" Numero referencia:"+ numRef;
+            detalles =detalles +" Autor: "+ autor + " Libro: "+ titulo + " Paginas:"+ paginas +" Numero referencia:"+ numRef+" Veces prestado:"+ vecesPrestado;
+        }
         return detalles;
     }
-}
 }
